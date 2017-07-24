@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	var refreshTable = $("#bittrex").DataTable( {
 		"ajax": {
-			"url": "http://162.243.239.186:8000/?url=https://bittrex.com/api/v1.1/public/getmarketsummaries",
+			"url": "http://104.221.23.67:443/?url=https://bittrex.com/api/v1.1/public/getmarketsummaries",
 			"dataSrc": "result"
 		},
 		"columns": [
@@ -26,7 +26,11 @@ $(document).ready(function() {
                     ]
                 }
 	} );
-       setInterval (function test() {
+       setInterval (
+	   function test() 
+	   {
+		 console.log( "ready!" );
          refreshTable.ajax.reload( null, false );
-       }, 300000);
+		 
+       }, 10000);
 } );
