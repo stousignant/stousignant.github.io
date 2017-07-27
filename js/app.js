@@ -29,7 +29,7 @@ $(document).ready(function() {
        setInterval (
 	   function test() 
 	   {
-		 console.log( "ready!" );
+		 console.log( "ready2!" );
          refreshTable.ajax.reload( null, false );
 		 
        }, 10000);
